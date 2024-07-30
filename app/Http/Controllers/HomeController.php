@@ -36,7 +36,7 @@ class HomeController extends Controller
 			->join('categories', 'products.category', '=', 'categories.id')
 			->select('products.*', 'categories.name as category_title')
 			->get();
-            $social =  DB::table('social_media')->get();
+            $social =  DB::table('social_media
 
             return view('welcome',compact(['page','shops','section' ,'social']));
         }
